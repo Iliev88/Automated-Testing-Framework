@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+﻿using System;
 
 namespace WordpressAutomation
 {
@@ -10,11 +10,7 @@ namespace WordpressAutomation
             {
                 public static void Select()
                 {
-                    var menuPosts = Driver.Instance.FindElement(By.Id("menu-posts"));
-                    menuPosts.Click();
-
-                    var addNew = Driver.Instance.FindElement(By.LinkText("Add New"));
-                    addNew.Click();
+                    MenuSelector.Select("menu-posts", "Add New");
                 }
             }
         }
@@ -25,8 +21,7 @@ namespace WordpressAutomation
             {
                 public static void Select()
                 {
-                    Driver.Instance.FindElement(By.Id("menu-pages")).Click();
-                    Driver.Instance.FindElement(By.LinkText("All Pages")).Click();
+                    MenuSelector.Select("menu-pages", "All Pages");
                 }
             }
         }
