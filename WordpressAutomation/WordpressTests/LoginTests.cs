@@ -5,27 +5,12 @@ using WordpressAutomation;
 namespace WordpressTests
 {
     [TestClass]
-    public class LoginTests
+    public class LoginTests : WordpressTest
     {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
-
         [TestMethod]
         public void Admin_User_Can_Login()
         {
-            LoginPage.GoTo();
-            LoginPage.LoginAs("opensourcecms").WithPassword("opensourcecms-wrong").Login();
-
             Assert.IsTrue(DashboardPage.IsAt, "Failed to login.");
-        }
-
-        [TestCleanup]
-        public void Cleanup()
-        {
-            Driver.Close();
         }
     }
 }
