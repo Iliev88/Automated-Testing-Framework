@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WordpressAutomation;
+using WordpressAutomation.Workflows;
 
 namespace WordpressTests.PostTests
 {
@@ -29,24 +30,28 @@ namespace WordpressTests.PostTests
         [TestMethod]
         public void Added_Posts_Show_Up()
         {
-            // Go to posts, get post count, store\
             ListPostPage.GoTo(PostType.Posts);
             ListPostPage.StoreCount();
 
-            // Add a new post
-            NewPostPage.GoTo();
-            NewPostPage.CreatePost("Added posts show up, title").WithBody("Added posts show up, body").Publish();
-
-            // Go to post, get new post count
+            PostCreator.CreatePost();
+            
             ListPostPage.GoTo(PostType.Posts);
             Assert.AreEqual(ListPostPage.PreviousPostCount + 1, ListPostPage.CurrentPostCount, "Count of posts does not increase");
             
-            // Check for added post
-            Assert.IsTrue(ListPostPage.DoesPostExistWithTitle("Added posts show up, title"));
+            Assert.IsTrue(ListPostPage.DoesPostExistWithTitle(PostCreator.PreviousTitle));
 
-            // Trash post (clean up)
-            ListPostPage.TrashPost("Added posts show up, title");
+            ListPostPage.TrashPost(PostCreator.PreviousTitle);
             Assert.AreEqual(ListPostPage.PreviousPostCount, ListPostPage.CurrentPostCount, "Couldn't trash post");
+        }
+
+        [TestMethod]
+        public void Can_Search_Posts()
+        {
+            PostCreator.CreatePost();
+
+            ListPostPage.SearchForPost(PostCreator.PreviousTitle);
+
+            Assert.IsTrue(ListPostPage.DoesPostExistWithTitle(PostCreator.PreviousTitle));
         }
 
     }
