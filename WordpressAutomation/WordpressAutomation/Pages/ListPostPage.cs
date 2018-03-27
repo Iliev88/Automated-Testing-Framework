@@ -69,7 +69,7 @@ namespace WordpressAutomation
             foreach (var row in rows)
             {
                 ReadOnlyCollection<IWebElement> links = null;
-                links = row.FindElements(By.LinkText(title));
+                Driver.NoWait(() => links = row.FindElements(By.LinkText(title)));
 
                 if (links.Count > 0)
                 {
