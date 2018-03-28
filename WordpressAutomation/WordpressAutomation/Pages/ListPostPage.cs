@@ -37,6 +37,12 @@ namespace WordpressAutomation
 
                 case PostType.Posts:
                     LeftNavigation.Posts.AllPosts.Select();
+
+                    if (!IsAt)
+                    {
+                        Error.Log("Did not navigate to all posts!");
+                    }
+
                     break;
             }
         }
@@ -113,6 +119,14 @@ namespace WordpressAutomation
                     return false;
                 }
             }
+        }
+    }
+
+    internal class Error
+    {
+        internal static void Log(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 
