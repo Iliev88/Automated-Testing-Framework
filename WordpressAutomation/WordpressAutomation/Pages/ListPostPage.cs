@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Linq;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.PageObjects;
-
-namespace WordpressAutomation
+﻿namespace WordpressAutomation
 {
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Interactions;
+    using System;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+
     public class ListPostPage
     {
         private static int lastCount;

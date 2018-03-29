@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WordpressAutomation;
-using WordpressAutomation.Workflows;
-
-namespace WordpressTests
+﻿namespace WordpressTests
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using WordpressAutomation;
+    using WordpressAutomation.Workflows;
+    
     public class WordpressTest
     {
         [TestInitialize]

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WordpressAutomation.Workflows
+﻿namespace WordpressAutomation.Workflows
 {
+    using System;
+    using System.Text;
+
     public class PostCreator
     {
         public static string PreviousTitle { get; set; }

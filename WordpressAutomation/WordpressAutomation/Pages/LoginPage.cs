@@ -1,14 +1,9 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WordpressAutomation
+﻿namespace WordpressAutomation
 {
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Support.UI;
+    using System;
+
     public class LoginPage
     {
         public static void GoTo()

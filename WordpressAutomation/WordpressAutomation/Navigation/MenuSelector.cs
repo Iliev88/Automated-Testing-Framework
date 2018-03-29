@@ -1,7 +1,7 @@
-﻿using OpenQA.Selenium;
-
-namespace WordpressAutomation
+﻿namespace WordpressAutomation
 {
+    using OpenQA.Selenium;
+
     public class MenuSelector
     {
         public static void Select(string topLevelMenuId, string subMenuLinkText)

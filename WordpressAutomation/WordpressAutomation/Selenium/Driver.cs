@@ -1,12 +1,10 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Remote;
-using System;
-using System.Collections.ObjectModel;
-using System.Threading;
-
-namespace WordpressAutomation
+﻿namespace WordpressAutomation
 {
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Firefox;
+    using System;
+    using System.Threading;
+
     public class Driver
     {
         public static IWebDriver Instance { get; set; }

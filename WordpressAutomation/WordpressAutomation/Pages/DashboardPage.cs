@@ -1,12 +1,7 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WordpressAutomation
+﻿namespace WordpressAutomation
 {
+    using OpenQA.Selenium;
+
     public class DashboardPage
     {
         public static bool IsAt

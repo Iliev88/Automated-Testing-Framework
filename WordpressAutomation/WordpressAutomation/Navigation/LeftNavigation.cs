@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WordpressAutomation
+﻿namespace WordpressAutomation
 {
     public class LeftNavigation
     {

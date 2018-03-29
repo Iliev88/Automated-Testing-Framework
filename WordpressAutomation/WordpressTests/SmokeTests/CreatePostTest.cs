@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordpressAutomation;
-
-namespace WordpressTests
+﻿namespace WordpressTests
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using WordpressAutomation;
+
     [TestClass]
     public class CreatePostTest : WordpressTest
     {
